@@ -21,7 +21,7 @@ const CreateEventPage = () => {
     console.log(`Bearer ${token}`);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/events",
+        "https://swissmote-yq3v.onrender.com/api/events",
         { title, description, image, date },
         {
           headers: {

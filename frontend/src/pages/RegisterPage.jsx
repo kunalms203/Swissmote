@@ -12,7 +12,7 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/register", {
+      const response = await axios.post("https://swissmote-yq3v.onrender.com/api/auth/register", {
         name,
         email,
         password,

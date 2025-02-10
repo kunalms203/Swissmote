@@ -9,15 +9,16 @@ const eventRoutes = require("./routes/eventRoutes");
 const Event = require("./models/Event"); // Import Event Model
 const mongoose = require("mongoose");
 
+
 connectDB();
 const app = express();
 const server = http.createServer(app); // Create HTTP Server for Socket.IO
 
 const io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173", // ✅ Set specific frontend origin
+      origin: "https://swissmote-yq3v.onrender.com", 
       methods: ["GET", "POST"],
-      credentials: true, // ✅ Allow authentication headers & cookies
+      credentials: true, 
     },
   });
   
