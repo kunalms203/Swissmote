@@ -4,7 +4,7 @@
 
 The Event Management Platform is a full-stack web application built using the MERN stack. It allows users to create, manage, and attend events with real-time updates.
 
-22 Features
+## Features
 
  - **User Authentication**: Secure authentication using JWT.
  - **Event Creation & Management**: Users can create, edit, and delete events.
@@ -64,4 +64,5 @@ ensure you have the following installed:
 ### Deployment
 
 - **Frontend**: Deploy on Render by linking the GitHub repository.
- - **Backend**: Deploy on Render, ensuring environment variables are set up correctly.
+- **Backend**: Deploy on Render, ensuring environment variables are set up correctly.
+- **Live Demo**: https://swissmote-1-dv8r.onrender.com
