@@ -35,7 +35,7 @@ ensure you have the following installed:
 
 1. Clone the repository:
    pyled
-   git clone https://github.com/your-repo/event-app.git
+   git clone https://github.com/kunalms203/Swissmote.git
    cd event-app/backend
  - Install dependencies:
    code 
