@@ -16,7 +16,7 @@ const server = http.createServer(app); // Create HTTP Server for Socket.IO
 
 const io = new Server(server, {
     cors: {
-      origin: "https://swissmote-yq3v.onrender.com", 
+      origin: "http://localhost:5173", 
       methods: ["GET", "POST"],
       credentials: true, 
     },
