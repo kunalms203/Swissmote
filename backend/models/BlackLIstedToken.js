@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 
 const blacklistedTokenSchema = new mongoose.Schema({
-  token: { type: String, required: true, unique: true },
-  expiresAt: { type: Date, required: true }, // Auto-remove after expiry
+  token: { type: String, required: true },
+  expiresAt: { type: Date, required: true },
 });
 
-module.exports = mongoose.model("Blacklistedtoken", blacklistedTokenSchema);
+// Prevent model overwrite
+const BlacklistedToken = mongoose.models.BlacklistedToken || mongoose.model('BlacklistedToken', blacklistedTokenSchema);
+
+module.exports = BlacklistedToken;
+
