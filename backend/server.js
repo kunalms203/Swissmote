@@ -23,7 +23,14 @@ const io = new Server(server, {
   });
   
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://your-frontend-deployment-url.com"], // Add Render frontend URL
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+    credentials: true,
+  })
+);
 
 // API Routes
 app.use("/api/auth", authRoutes);
