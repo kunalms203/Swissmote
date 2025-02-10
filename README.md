@@ -19,7 +19,7 @@ The Event Management Platform is a full-stack web application built using the ME
 - **Frontend**: React.js, Tailwind CSS
  - **Backend**: Node.js, Express.js
  - **Database**: MongoDB Atlas
- - **Authentication*�: JWT
+ - **Authentication**: JWT
  - **Real-time Attendees**: WebSockets
 
 ## Installation & Setup
