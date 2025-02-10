@@ -5,6 +5,4 @@ const blacklistedTokenSchema = new mongoose.Schema({
   expiresAt: { type: Date, required: true }, // Auto-remove after expiry
 });
 
-const BlacklistedToken = mongoose.model('BlacklistedToken', blacklistedTokenSchema);
-
-module.exports = BlacklistedToken;
+module.exports = mongoose.model("Blacklistedtoken", blacklistedTokenSchema);

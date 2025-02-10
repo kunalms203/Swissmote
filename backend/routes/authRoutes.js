@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
-const BlacklistedToken = require("../models/BlacklistedToken");
+const blacklistedtoken = require("../models/BlacklistedToken");
 const authMiddleware = require("../middleware/authMiddleware");
 const redis = require('redis');
 
@@ -49,7 +49,7 @@ router.post('/logout', authMiddleware, async (req, res) => {
     const expiresAt = new Date(decoded.exp * 1000); // Convert to Date format
 
     // Store token in MongoDB
-    const blacklisttoken = await BlacklistedToken({ token, expiresAt });
+    const blacklisttoken = await blacklistedtoken({ token, expiresAt });
     await blacklisttoken.save();
 
     res.status(200).json({ message: 'User signed out successfully' });
