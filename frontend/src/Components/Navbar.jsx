@@ -7,6 +7,7 @@ const navigation = [
   { name: "Log In", href: "/login", current: false },
   { name: "Register", href: "/register", current: false },
   { name: "Create Event", href: "/create-event", current: false },
+  
 ];
 
 
@@ -90,17 +91,8 @@ export default function Navbar() {
                 </MenuButton>
               </div>
               <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5">
-                <MenuItem>
-                  {({ active }) => (
-                    <Link
-                      to="/profile"
-                      className={`block px-4 py-2 text-sm text-gray-700 ${active ? "bg-gray-100" : ""}`}
-                    >
-                      Your Profile
-                    </Link>
-                  )}
-                </MenuItem>
-                <MenuItem>
+                <MenuItem className={localStorage.getItem("token") ? "" : "hidden"}>
+
                   {({ active }) => (
                     <a
                       onClick={handleSignOut}
