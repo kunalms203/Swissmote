@@ -47,7 +47,7 @@ ensure you have the following installed:
    PORT=3000
   - Start the backend server:
    codes
-   npm run dev
+   node server.js
 
 ### Frontend Setup
 
@@ -59,7 +59,7 @@ ensure you have the following installed:
    npm install
   - Start the frontend server:
    code
-   npm start
+   npm run dev
 
 ### Deployment
 
